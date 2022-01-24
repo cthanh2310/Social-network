@@ -28,7 +28,7 @@ exports.login = async (req, res, next) => {
       const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
       res.status(200).json({
         status: 'Success!',
-        data: { token, us1996erName: user.name },
+        data: { token, userName: user.name },
       });
     } else {
       // Error password is not correct
@@ -36,5 +36,23 @@ exports.login = async (req, res, next) => {
       err.statusCode = 400;
       return next(err);
     }
-  } catch (err) {}
+  } catch (err) {
+      return next(err);
+  }
 };
+
+exports.getCurrentUser = async (req, res, next) => {
+  try {
+    const data = { user: null};
+    if(req.user) {
+      const user = await User.findOne({_id: req.user.userId});
+      data.user = { userName: user.name};
+    }
+    res.status(200).json({
+      status: 'success',
+      data: data
+    });
+  } catch(err) {
+    return next(err);
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">
+                <a href="#">twitter</a>
+            </h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#"></a>Register</li>
+                    <li><span href="#" class="user-name">Hello, Thanh Pham</span></li>
+                    <li><a href="#"></a>Sign out</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="form-section">
+            <form action="" class="form">
+                <textarea 
+                    type="text"
+                    name="content"
+                    id="content"
+                    class="content"
+                    placeholder="Write your thinking..."
+                >
+
+                </textarea>
+                <button class="btn" type="submit">Tweet</button>
+            </form>
+        </section>
+        <section class="post-section">
+            <div class="post-list">
+                <div class="post-item">
+                    <p class="post-content">
+                        Random Content Ink is the lasting legacy of Carl Reiner and one of his last gifts to the entertainment industry; a haven for celebrities, artists, and policy-makers to share their stories and to solidify their own legacy through print, digital and social media.  In conjunction with this legacy-building platform, Random Content Ink has positioned itself as a content creation and media management agency of the future. 
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-infors">
+                            <span>By Thanh Pham</span>
+                            <span>Date: 23/10/2000</span>
+                        </div>
+                        <div class="post-edit-delete">
+                            <span>Edit</span>
+                            <span>Delete</span>
+                            <div class="delete-question">Are your sure?</div>
+                            <span>Yes</span>
+                            <span>No</span>
+                        </div>
+                    </div>
+                    <div class="post-edit-form">
+                        <form action="" class="edit-form">
+                            <textarea
+                                type="text"
+                                name="content"
+                                id="content"
+                                class="content"
+                                placeholder="Please enter"
+                            >Random Content Ink is the lasting legacy of Carl Reiner and one of his last gifts to the entertainment industry; a haven for celebrities, artists, and policy-makers to share their stories and to solidify their own legacy through print, digital and social media.  In conjunction with this legacy-building platform, Random Content Ink has positioned itself as a content creation and media management agency of the future.
+                            </textarea>
+                            <div class="btn-container">
+                                <button class="btn">Update</button>
+                                <button class="btn">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- login -->
+        <section class="auth-container">
+            <form action="" class="auth-form">
+                <h2>Enter your account</h2>
+                <div class="error-message">Error: Your Password is incorrect</div>
+                <input 
+                    type="email"
+                    name="email"
+                    id=""
+                    required
+                    placeholder="Enter your email address"
+                />
+                <input 
+                    type="password"
+                    name="password"
+                    id=""
+                    required
+                    placeholder="Enter your password"
+                />
+                <button class="btn" type="submit">Login</button>
+            </form>
+        </section>
+        <!-- register -->
+        <section class="auth-container">
+            <form action="" class="auth-form">
+                <h2>Register your account</h2>
+                <div class="error-message">Error: Your Password is incorrect</div>
+                <input 
+                    type="email"
+                    name="email"
+                    id=""
+                    required
+                    placeholder="Enter your email address"
+                />
+                <input 
+                    type="password"
+                    name="password"
+                    id=""
+                    required
+                    placeholder="Enter your password"
+                />
+                <button class="btn" type="submit">Register</button>
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>

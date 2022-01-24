@@ -20,7 +20,7 @@ app.use(express.json());
 
 // mount the route
 app.use('/api/v1/auth', authRoute);
-app.use('/api/v1/post', postRoute);
+app.use('/api/v1/posts', postRoute);
 
 // Unhandled Route
 app.all('*', (req, res, next) => {
